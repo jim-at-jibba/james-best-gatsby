@@ -14,34 +14,35 @@ import { createGlobalStyle, css } from "../utils/styled-components"
 import styled, { ThemeProvider } from "styled-components"
 import { theme } from "../utils/theme"
 import ImageBg from "./background-image"
+import Content from "./home-content"
+import reset from "styled-reset"
 
 const GlobalStyle = createGlobalStyle`
   html {
-    height: 100%;
-    position: relative;
-    overflow:auto;
-    font-size: 10px;
-    }
-  body {
-    height: 100%;
+    box-sizing: border-box;
     font-size: 10px;
   }
-  *,
-  *::before,
-  *::after {
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-weight: normal;
+    font-family: "roboto";
+    color: #333;
   }
-  html {
-    font-size: 62.5%;
+
+  ol, ul {
+    list-style: none;
   }
-  button, a {
-    outline: none;
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
-  body {
-    box-sizing: border-box;
-    font-size: 1.6rem;
+  p {
+      font-size: 1.6rem;
   }
 `
 
@@ -61,9 +62,7 @@ const Layout: React.SFC<{}> = ({ children }) => {
       <ImageBg>
         <Container>
           <Header />
-          <HomeBodyWrapper>
-            <main>{children}</main>
-          </HomeBodyWrapper>
+          <main>{children}</main>
           <GlobalStyle />
         </Container>
       </ImageBg>
@@ -73,13 +72,6 @@ const Layout: React.SFC<{}> = ({ children }) => {
 const Container = styled.div`
   padding: 0 25px;
   overflow: hidden;
-`
-
-const HomeBodyWrapper = styled.div`
-  ${() => css`
-    display: flex;
-    height: calc(100vh - 80px);
-  `}
 `
 
 export default Layout

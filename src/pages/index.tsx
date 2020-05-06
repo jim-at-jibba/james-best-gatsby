@@ -1,17 +1,25 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Content from "../components/home-content"
+import styled, { css } from "../utils/styled-components"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
+    <HomeBodyWrapper>
+      <Content>
+        <p>Nope</p>
+      </Content>
+    </HomeBodyWrapper>
   </Layout>
 )
 
+const HomeBodyWrapper = styled.div`
+  ${() => css`
+    display: flex;
+    height: calc(100vh - 80px);
+  `}
+`
 export default IndexPage
