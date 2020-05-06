@@ -10,10 +10,10 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import "./layout.css"
-import { createGlobalStyle } from "../utils/styled-components"
-import { ThemeProvider } from "styled-components"
+import { createGlobalStyle, css } from "../utils/styled-components"
+import styled, { ThemeProvider } from "styled-components"
 import { theme } from "../utils/theme"
+import ImageBg from "./background-image"
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -58,27 +58,28 @@ const Layout: React.SFC<{}> = ({ children }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <ImageBg>
+        <Container>
+          <Header />
+          <HomeBodyWrapper>
+            <main>{children}</main>
+          </HomeBodyWrapper>
+          <GlobalStyle />
+        </Container>
+      </ImageBg>
     </ThemeProvider>
   )
 }
+const Container = styled.div`
+  padding: 0 25px;
+  overflow: hidden;
+`
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+const HomeBodyWrapper = styled.div`
+  ${() => css`
+    display: flex;
+    height: calc(100vh - 80px);
+  `}
+`
 
 export default Layout
