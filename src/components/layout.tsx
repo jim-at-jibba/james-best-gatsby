@@ -33,6 +33,10 @@ const GlobalStyle = createGlobalStyle`
     color: #333;
   }
 
+  h1 {
+    margin: 0.67em 0;
+  }
+
   ol, ul {
     list-style: none;
   }
