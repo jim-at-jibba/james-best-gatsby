@@ -13,18 +13,29 @@ import { createGlobalStyle, css } from "../utils/styled-components"
 import styled, { ThemeProvider } from "styled-components"
 import { theme } from "../utils/theme"
 import ImageBg from "./background-image"
+import px2vw from "../utils/px2vw"
+import spacing from "../utils/spacing"
 
 const GlobalStyle = createGlobalStyle`
-  html {
-    box-sizing: border-box;
-    font-size: 10px;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  *,
+  *:before,
+  *:after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    font-size: ${px2vw(24)};
+
+    @media (min-width: 768px) {
+      font-size: ${px2vw(18)};
+    }
+
+    @media (min-width: 1024px) {
+      font-size: ${px2vw(16)};
+    }
+  }
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     font-weight: normal;
     font-family: "roboto";
     color: #333;
@@ -35,7 +46,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    margin: 0.67em 0;
+    margin: ${px2vw(spacing(26))} 0;
   }
 
   ol, ul {
@@ -45,9 +56,6 @@ const GlobalStyle = createGlobalStyle`
   img {
     max-width: 100%;
     height: auto;
-  }
-  p {
-      font-size: 1.6rem;
   }
 `
 
@@ -74,9 +82,12 @@ const Layout: React.SFC<{}> = ({ children }) => {
     </ThemeProvider>
   )
 }
+
 const Container = styled.div`
-  padding: 0 25px;
-  overflow: hidden;
+  ${({ theme }) => css`
+    padding: 0 ${px2vw(spacing(25))};
+    overflow: hidden;
+  `}
 `
 
 export default Layout

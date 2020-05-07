@@ -14,6 +14,7 @@ export const theme = {
       lg: "25px",
       xl: "35px",
     },
+    base: 8,
   },
   colors: {
     white: "#ffffff",
