@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import { MarkdownRemark } from "../graphqlTypes"
 import PostContent from "./post-content"
 import BodyWrapper from "./shared/BodyWrapper"
+import "./styles.css"
 
 interface PostProps {
   data: {

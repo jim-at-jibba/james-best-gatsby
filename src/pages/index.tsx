@@ -14,38 +14,29 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <BodyWrapper>
-      <Inner>
-        <TagLineWrapper>
-          <h1>Hello, I'm James. I'm a software engineer from Bristol, UK.</h1>
-        </TagLineWrapper>
-        <Content>
-          <Title>About</Title>
-          <Text>
-            I’m a software engineer working primarily in JavaScript and
-            Typescript. I'm a full stack engineer at Candide in Bristol.
-          </Text>
-          <Text>
-            I create performant, highly scalable web based applications. I also
-            create mobile applications with experience in React Native as well
-            as the native platforms.
-          </Text>
-          <Text>
-            Writer for the Salted Bytes and Candide publications and co-host of
-            Salted Bytes podcast.
-          </Text>
-          <Text>Mentor at Coding Coach.</Text>
-        </Content>
-      </Inner>
+      <TagLineWrapper>
+        <h1>Hello, I'm James. I'm a software engineer from Bristol, UK.</h1>
+      </TagLineWrapper>
+      <Content>
+        <Title>About</Title>
+        <Text>
+          I’m a software engineer working primarily in JavaScript and
+          Typescript. I'm a full stack engineer at Candide in Bristol.
+        </Text>
+        <Text>
+          I create performant, highly scalable web based applications. I also
+          create mobile applications with experience in React Native as well as
+          the native platforms.
+        </Text>
+        <Text>
+          Writer for the Salted Bytes and Candide publications and co-host of
+          Salted Bytes podcast.
+        </Text>
+        <Text>Mentor at Coding Coach.</Text>
+      </Content>
     </BodyWrapper>
   </Layout>
 )
-
-const Inner = styled.div`
-  ${({ theme }) => css`
-    max-width: 1080px;
-    align-self: flex-end;
-  `}
-`
 
 const Title = styled.h1`
   ${({ theme }) => css`
