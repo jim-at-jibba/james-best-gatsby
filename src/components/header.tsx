@@ -1,10 +1,9 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 import styled, { css } from "../utils/styled-components"
 import px2vw from "../utils/px2vw"
 import spacing from "../utils/spacing"
-import { mediaQueries } from "../utils/media-queries"
+import mediaQueries from "../utils/media-queries"
 
 const Header = () => (
   <HeaderWrapper>

@@ -6,14 +6,14 @@ import Content from "../components/home-content"
 import styled, { css } from "../utils/styled-components"
 import px2vw from "../utils/px2vw"
 import spacing from "../utils/spacing"
-import { mediaQueries } from "../utils/media-queries"
+import mediaQueries from "../utils/media-queries"
 import { Text } from "../components/typography"
+import BodyWrapper from "../components/shared/BodyWrapper"
 
-// TODO Sort media queries - dont forget <Content> stlyes
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <HomeBodyWrapper>
+    <BodyWrapper>
       <Inner>
         <TagLineWrapper>
           <h1>Hello, I'm James. I'm a software engineer from Bristol, UK.</h1>
@@ -36,25 +36,9 @@ const IndexPage = () => (
           <Text>Mentor at Coding Coach.</Text>
         </Content>
       </Inner>
-    </HomeBodyWrapper>
+    </BodyWrapper>
   </Layout>
 )
-
-const HomeBodyWrapper = styled.div`
-  ${() => css`
-    display: flex;
-    justify-content: center;
-    height: calc(100vh - ${px2vw(80, 720)});
-
-    ${mediaQueries("md")(`
-      height: calc(100vh - ${px2vw(80, 1024)});
-    `)}
-
-    ${mediaQueries("xl")(`
-      height: calc(100vh - ${px2vw(80)});
-    `)}
-  `}
-`
 
 const Inner = styled.div`
   ${({ theme }) => css`

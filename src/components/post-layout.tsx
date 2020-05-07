@@ -2,6 +2,8 @@ import React from "react"
 import Layout from "./layout"
 import { graphql } from "gatsby"
 import { MarkdownRemark } from "../graphqlTypes"
+import PostContent from "./post-content"
+import BodyWrapper from "./shared/BodyWrapper"
 
 interface PostProps {
   data: {
@@ -17,12 +19,16 @@ const PostLayout: React.SFC<PostProps> = ({ data }) => {
 
   return (
     <Layout>
-      <h1>{markdownRemark.frontmatter.title}</h1>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: markdownRemark.html,
-        }}
-      />
+      <BodyWrapper>
+        <PostContent>
+          <h1>{markdownRemark.frontmatter.title}</h1>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: markdownRemark.html,
+            }}
+          />
+        </PostContent>
+      </BodyWrapper>
     </Layout>
   )
 }
