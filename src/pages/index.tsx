@@ -44,7 +44,15 @@ const HomeBodyWrapper = styled.div`
   ${() => css`
     display: flex;
     justify-content: center;
-    height: calc(100vh - 80px);
+    height: calc(100vh - ${px2vw(80, 720)});
+
+    ${mediaQueries("md")(`
+      height: calc(100vh - ${px2vw(80, 1024)});
+    `)}
+
+    ${mediaQueries("xl")(`
+      height: calc(100vh - ${px2vw(80)});
+    `)}
   `}
 `
 
@@ -73,7 +81,7 @@ const TagLineWrapper = styled.div`
       font-family: "Dank Mono", monospace;
       font-size: ${theme.fonts.sizes.xxxl};
       ${mediaQueries("md")(`
-      font-size: 50px;
+        font-size: 50px;
       `)};
     }
   `}

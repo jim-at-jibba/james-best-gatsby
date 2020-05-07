@@ -21,9 +21,18 @@ const Header = () => (
 
 const HeaderWrapper = styled.div`
   ${() => css`
-    height: ${px2vw(80)};
+    height: ${px2vw(80, 720)};
     width: 100vw;
     padding-top: ${px2vw(spacing(24))};
+
+    ${mediaQueries("md")(`
+      height: ${px2vw(80, 1024)}
+    `)}
+
+    ${mediaQueries("xl")(`
+      height: ${px2vw(80)}
+    `)}
+
     header {
       width: 100vw;
       display: flex;
@@ -38,13 +47,13 @@ const HeaderWrapper = styled.div`
   `}
 `
 
+const Left = styled.div``
+
 const LogoWrapper = styled.div`
   ${({ theme }) => css`
     position: relative;
-    width: ${px2vw(60)};
-    max-width: 60px;
-    height: ${px2vw(60)};
-    max-height: 60px;
+    width: 60px;
+    height: 60px;
     border: 5px solid ${theme.colors.primary};
     transition: transform 1.2s ease-in-out;
     &:hover {
@@ -58,11 +67,11 @@ const Logo = styled.span`
     position: absolute;
     a {
       text-decoration: none;
-      font-size: ${px2vw(25)};
+      font-size: ${theme.fonts.sizes.xxxl};
       color: ${theme.fonts.colors.primary};
       font-weight: bold;
       font-family: "Dank Mono", monospace;
-      line-height: ${px2vw(40)};
+      line-height: 40px;
       letter-spacing: 0.1px;
     }
   `}
