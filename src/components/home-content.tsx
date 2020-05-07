@@ -3,6 +3,7 @@ import styled, { css } from "../utils/styled-components"
 import { hexToRGB } from "../utils/color-utils"
 import px2vw from "../utils/px2vw"
 import spacing from "../utils/spacing"
+import { mediaQueries } from "../utils/media-queries"
 
 const Content: React.SFC<{}> = ({ children }) => (
   <StyledContent>{children}</StyledContent>
@@ -25,6 +26,9 @@ const StyledContent = styled.div`
         padding-bottom: ${px2vw(spacing(6))};
       }
     }
+    ${mediaQueries("md")(`
+      padding: ${px2vw(spacing(40))} ${px2vw(spacing(100))};
+    `)}
   `}
 `
 

@@ -22,12 +22,12 @@ const IndexPage = () => (
           <Title>About</Title>
           <Text>
             I’m a software engineer working primarily in JavaScript and
-            Typescript. I am a full stack engineer at Candide in Bristol.
+            Typescript. I'm a full stack engineer at Candide in Bristol.
           </Text>
           <Text>
             I create performant, highly scalable web based applications. I also
-            create enterprise level mobile applications with experience in React
-            Native as well as the native platforms.{" "}
+            create mobile applications with experience in React Native as well
+            as the native platforms.
           </Text>
           <Text>
             Writer for the Salted Bytes and Candide publications and co-host of
