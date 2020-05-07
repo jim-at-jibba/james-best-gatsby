@@ -4,6 +4,7 @@ import styled, { css } from "../utils/styled-components"
 import px2vw from "../utils/px2vw"
 import spacing from "../utils/spacing"
 import mediaQueries from "../utils/media-queries"
+import { RiGithubLine, RiTwitterLine } from "react-icons/ri"
 
 const Header = () => (
   <HeaderWrapper>
@@ -14,7 +15,23 @@ const Header = () => (
         </Logo>
         <LogoWrapper />
       </Left>
-      <div></div>
+      <Right>
+        <ul>
+          <li>
+            <Link to="blog">ARTICLES</Link>
+          </li>
+          <li>
+            <a href="https://github.com/jim-at-jibba" target="_blank">
+              <RiGithubLine />
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/jimgbest" target="_blank">
+              <RiTwitterLine />
+            </a>
+          </li>
+        </ul>
+      </Right>
     </header>
   </HeaderWrapper>
 )
@@ -22,7 +39,6 @@ const Header = () => (
 const HeaderWrapper = styled.div`
   ${() => css`
     height: ${px2vw(80, 720)};
-    width: 100vw;
     padding-top: ${px2vw(spacing(24))};
 
     ${mediaQueries("md")(`
@@ -34,7 +50,6 @@ const HeaderWrapper = styled.div`
     `)}
 
     header {
-      width: 100vw;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -46,6 +61,45 @@ const Left = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+`
+
+const Right = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+
+    ul {
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      list-style: none;
+      width: 200px;
+
+      li {
+        display: flex;
+        align-items: center;
+      }
+
+      a {
+        font-family: "Dank Mono";
+        text-decoration: none;
+        font-size: ${theme.fonts.sizes.xxl};
+        color: ${theme.fonts.colors.primary};
+        transition: all 0.2s;
+        padding: 0 3px;
+
+        &:hover {
+          background: ${theme.colors.accent};
+        }
+      }
+    }
+    svg {
+      width: 30px;
+      height: 30px;
+      color: ${theme.fonts.colors.primary};
+      margin-top: ${spacing(10)}px;
+    }
+  `}
 `
 
 const LogoWrapper = styled.div`
