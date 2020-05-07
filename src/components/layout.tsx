@@ -6,7 +6,6 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
@@ -14,8 +13,6 @@ import { createGlobalStyle, css } from "../utils/styled-components"
 import styled, { ThemeProvider } from "styled-components"
 import { theme } from "../utils/theme"
 import ImageBg from "./background-image"
-import Content from "./home-content"
-import reset from "styled-reset"
 
 const GlobalStyle = createGlobalStyle`
   html {
