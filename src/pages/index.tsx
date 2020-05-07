@@ -6,6 +6,8 @@ import Content from "../components/home-content"
 import styled, { css } from "../utils/styled-components"
 import px2vw from "../utils/px2vw"
 import spacing from "../utils/spacing"
+import { mediaQueries } from "../utils/media-queries"
+import { Text } from "../components/typography"
 
 // TODO Sort media queries - dont forget <Content> stlyes
 const IndexPage = () => (
@@ -18,20 +20,20 @@ const IndexPage = () => (
         </TagLineWrapper>
         <Content>
           <Title>About</Title>
-          <p>
+          <Text>
             I’m a software engineer working primarily in JavaScript and
             Typescript. I am a full stack engineer at Candide in Bristol.
-          </p>
-          <p>
+          </Text>
+          <Text>
             I create performant, highly scalable web based applications. I also
             create enterprise level mobile applications with experience in React
             Native as well as the native platforms.{" "}
-          </p>
-          <p>
+          </Text>
+          <Text>
             Writer for the Salted Bytes and Candide publications and co-host of
             Salted Bytes podcast.
-          </p>
-          <p>Mentor at Coding Coach.</p>
+          </Text>
+          <Text>Mentor at Coding Coach.</Text>
         </Content>
       </Inner>
     </HomeBodyWrapper>
@@ -58,7 +60,7 @@ const Title = styled.h1`
     font-family: "Dank Mono", monospace;
     color: ${theme.fonts.colors.primary};
     border-bottom: 5px solid ${theme.colors.accent};
-    font-size: ${px2vw(24)};
+    font-size: ${theme.fonts.sizes.xxxl};
     display: inline-block;
   `}
 `
@@ -69,7 +71,10 @@ const TagLineWrapper = styled.div`
 
     h1 {
       font-family: "Dank Mono", monospace;
-      font-size: ${px2vw(40)};
+      font-size: ${theme.fonts.sizes.xxxl};
+      ${mediaQueries("md")(`
+      font-size: 50px;
+      `)};
     }
   `}
 `
