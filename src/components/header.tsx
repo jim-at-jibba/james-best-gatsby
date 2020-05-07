@@ -4,16 +4,17 @@ import React from "react"
 import styled, { css } from "../utils/styled-components"
 import px2vw from "../utils/px2vw"
 import spacing from "../utils/spacing"
+import { mediaQueries } from "../utils/media-queries"
 
 const Header = () => (
   <HeaderWrapper>
     <header>
-      <div className="header-left">
+      <Left>
         <Logo>
           <Link to="/">JB</Link>
         </Logo>
         <LogoWrapper />
-      </div>
+      </Left>
       <div></div>
     </header>
   </HeaderWrapper>
@@ -38,16 +39,15 @@ const HeaderWrapper = styled.div`
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      .header-left {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
     }
   `}
 `
 
-const Left = styled.div``
+const Left = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
 
 const LogoWrapper = styled.div`
   ${({ theme }) => css`
