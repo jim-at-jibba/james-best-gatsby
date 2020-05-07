@@ -40,7 +40,7 @@ const HomeBodyWrapper = styled.div`
 
 const Title = styled.h1`
   ${({ theme }) => css`
-    font-family: "Space Mono", monospace;
+    font-family: "Dank Mono", monospace;
     color: ${theme.fonts.colors.primary};
     border-bottom: 5px solid ${theme.colors.accent};
     font-size: 24px;

@@ -57,7 +57,7 @@ const Logo = styled.span`
       font-size: 2.5rem;
       color: ${theme.fonts.colors.primary};
       font-weight: bold;
-      font-family: "Space Mono", monospace;
+      font-family: "Dank Mono", monospace;
       line-height: 40px;
       letter-spacing: 0.1px;
     }
