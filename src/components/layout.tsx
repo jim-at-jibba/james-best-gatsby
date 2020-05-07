@@ -17,36 +17,28 @@ import px2vw from "../utils/px2vw"
 import spacing from "../utils/spacing"
 
 const GlobalStyle = createGlobalStyle`
-  *,
-  *:before,
-  *:after {
-    margin: 0;
-    padding: 0;
+  html {
     box-sizing: border-box;
+    font-size: 16px;
   }
-  :root {
-    font-size: ${px2vw(24)};
 
-    @media (min-width: 768px) {
-      font-size: ${px2vw(18)};
-    }
-
-    @media (min-width: 1024px) {
-      font-size: ${px2vw(16)};
-    }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
   }
-  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-    font-weight: normal;
-    font-family: "roboto";
+
+  body {
+    padding: 0;
+    margin: 0;
+    font: 100% / 1.618 Roboto, Arial, sans-serif;
     color: #333;
   }
 
   h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 16px;
     font-family: "Dank Mono"
-  }
-
-  h1 {
-    margin: ${px2vw(spacing(26))} 0;
   }
 
   ol, ul {
