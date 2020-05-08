@@ -109,6 +109,7 @@ const LogoWrapper = styled.div`
     height: 60px;
     border: 5px solid ${theme.colors.primary};
     transition: transform 1.2s ease-in-out;
+    pointer-events: none;
     &:hover {
       transform: rotate(360deg);
     }
