@@ -18,7 +18,7 @@ const Header = () => (
       <Right>
         <ul>
           <li>
-            <Link to="blog">ARTICLES</Link>
+            <Link to="posts">POSTS</Link>
           </li>
           <li>
             <a href="https://github.com/jim-at-jibba" target="_blank">

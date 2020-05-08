@@ -17,7 +17,7 @@ export const theme = {
     base: 8,
   },
   colors: {
-    white: "#ffffff",
+    white: "#e5eaec",
     accent: "#ff286c",
     accentDark: "#E52461",
     accentLight: "#FF93B5",
