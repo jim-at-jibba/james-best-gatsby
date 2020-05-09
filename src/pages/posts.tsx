@@ -12,7 +12,6 @@ import mediaQueries from "../utils/media-queries"
 import px2vw from "../utils/px2vw"
 
 const PostRow: React.SFC<{ post: any }> = ({ post }) => {
-  console.log("POST", post)
   const { node } = post
   const { timeToRead, frontmatter } = node
   return (
