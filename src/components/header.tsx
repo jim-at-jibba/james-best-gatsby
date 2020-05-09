@@ -6,35 +6,43 @@ import spacing from "../utils/spacing"
 import mediaQueries from "../utils/media-queries"
 import { RiGithubLine, RiTwitterLine } from "react-icons/ri"
 
-const Header = () => (
-  <HeaderWrapper>
-    <header>
-      <Left>
-        <Logo>
-          <Link to="/">JB</Link>
-        </Logo>
-        <LogoWrapper />
-      </Left>
-      <Right>
-        <ul>
-          <li>
-            <Link to="posts">POSTS</Link>
-          </li>
-          <li>
-            <a href="https://github.com/jim-at-jibba" target="_blank">
-              <RiGithubLine />
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/jimgbest" target="_blank">
-              <RiTwitterLine />
-            </a>
-          </li>
-        </ul>
-      </Right>
-    </header>
-  </HeaderWrapper>
-)
+const Header = () => {
+  return (
+    <HeaderWrapper>
+      <header>
+        <Left>
+          <Logo>
+            <Link to="/">JB</Link>
+          </Logo>
+          <LogoWrapper />
+        </Left>
+        <Right>
+          <ul>
+            <li>
+              <Link
+                to="posts"
+                activeStyle={{ background: "#ff286c" }}
+                partiallyActive={true}
+              >
+                POSTS
+              </Link>
+            </li>
+            <li>
+              <a href="https://github.com/jim-at-jibba" target="_blank">
+                <RiGithubLine />
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/jimgbest" target="_blank">
+                <RiTwitterLine />
+              </a>
+            </li>
+          </ul>
+        </Right>
+      </header>
+    </HeaderWrapper>
+  )
+}
 
 const HeaderWrapper = styled.div`
   ${() => css`
