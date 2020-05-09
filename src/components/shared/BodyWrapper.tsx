@@ -8,9 +8,11 @@ const BodyContainer = styled.div`
     display: flex;
     justify-content: center;
     height: calc(100vh - ${px2vw(80, 720)});
+    padding-bottom: 30px;
 
     ${mediaQueries("md")(`
       height: calc(100vh - ${px2vw(80, 1024)});
+      padding-bottom: 0;
     `)}
 
     ${mediaQueries("xl")(`
