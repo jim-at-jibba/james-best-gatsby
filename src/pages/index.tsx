@@ -44,12 +44,14 @@ const HomeBodyWrapper = styled.div`
   ${() => css`
     display: flex;
     justify-content: center;
+    margin-top: 20px;
     ${mediaQueries("sm")(`
       height: calc(100vh - ${px2vw(80, 720)});
     `)}
 
     ${mediaQueries("md")(`
       height: calc(100vh - ${px2vw(80, 1024)});
+      margin-top: 0;
     `)}
 
     ${mediaQueries("xl")(`
