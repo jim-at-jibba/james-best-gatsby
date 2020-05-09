@@ -17,7 +17,6 @@ const PostContent: React.SFC<{}> = ({ children }) => {
 
 const StyledContent = styled.div`
   ${({ theme }) => css`
-    align-self: flex-end;
     height: 80vh;
     margin: 0 auto;
     max-width: ${px2vw(960, 960)};

@@ -11,10 +11,10 @@ const Content: React.SFC<{}> = ({ children }) => (
 
 const StyledContent = styled.div`
   ${({ theme }) => css`
-    align-self: flex-end;
     margin: 0 auto;
     max-width: ${px2vw(960, 960)};
     width: 100%;
+    overflow-y: auto;
     padding: ${px2vw(spacing(30))} ${px2vw(spacing(60))};
     background: ${hexToRGB(theme.colors.primary, 0.7)};
     border: 1px solid ${theme.fonts.colors.primary};
@@ -29,6 +29,10 @@ const StyledContent = styled.div`
     ${mediaQueries("md")(`
       padding: ${px2vw(spacing(40))} ${px2vw(spacing(100))};
     `)}
+
+    @media screen and (max-width: 399px) {
+      height: 65vh;
+    }
   `}
 `
 

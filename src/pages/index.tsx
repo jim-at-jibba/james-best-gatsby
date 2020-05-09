@@ -13,31 +13,58 @@ import BodyWrapper from "../components/shared/BodyWrapper"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <BodyWrapper>
-      <TagLineWrapper>
-        <h1>Hello, I'm James. I'm a software engineer from Bristol, UK.</h1>
-      </TagLineWrapper>
-      <Content>
-        <Title>About</Title>
-        <Text>
-          I’m a software engineer working primarily in JavaScript and
-          Typescript. I'm a full stack engineer at Candide in Bristol.
-        </Text>
-        <Text>
-          I create performant, highly scalable web based applications. I also
-          create mobile applications with experience in React Native as well as
-          the native platforms.
-        </Text>
-        <Text>
-          Writer for the Salted Bytes and Candide publications and co-host of
-          Salted Bytes podcast.
-        </Text>
-        <Text>Mentor at Coding Coach.</Text>
-      </Content>
-    </BodyWrapper>
+    <HomeBodyWrapper>
+      <Inner>
+        <TagLineWrapper>
+          <h1>Hello, I'm James. I'm a software engineer from Bristol, UK.</h1>
+        </TagLineWrapper>
+        <Content>
+          <Title>About</Title>
+          <Text>
+            I’m a software engineer working primarily in JavaScript and
+            Typescript. I'm a full stack engineer at Candide in Bristol.
+          </Text>
+          <Text>
+            I create performant, highly scalable web based applications. I also
+            create mobile applications with experience in React Native as well
+            as the native platforms.
+          </Text>
+          <Text>
+            Writer for the Salted Bytes and Candide publications and co-host of
+            Salted Bytes podcast.
+          </Text>
+          <Text>Mentor at Coding Coach.</Text>
+        </Content>
+      </Inner>
+    </HomeBodyWrapper>
   </Layout>
 )
 
+const HomeBodyWrapper = styled.div`
+  ${() => css`
+    display: flex;
+    justify-content: center;
+    ${mediaQueries("sm")(`
+      height: calc(100vh - ${px2vw(80, 720)});
+    `)}
+
+    ${mediaQueries("md")(`
+      height: calc(100vh - ${px2vw(80, 1024)});
+    `)}
+
+    ${mediaQueries("xl")(`
+      height: calc(100vh - ${px2vw(80)});
+    `)}
+  `}
+`
+
+const Inner = styled.div`
+  ${() => css`
+    width: 100%;
+    max-width: 1080px;
+    align-self: flex-end;
+  `}
+`
 const Title = styled.h1`
   ${({ theme }) => css`
     font-family: "Dank Mono", monospace;

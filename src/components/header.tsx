@@ -38,9 +38,12 @@ const Header = () => (
 
 const HeaderWrapper = styled.div`
   ${() => css`
-    height: ${px2vw(80, 720)};
+    height: 80px;
     padding-top: ${px2vw(spacing(24))};
 
+    ${mediaQueries("sm")(`
+      height: ${px2vw(80, 720)}
+    `)}
     ${mediaQueries("md")(`
       height: ${px2vw(80, 1024)}
     `)}
