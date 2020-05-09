@@ -32,6 +32,23 @@ const StyledContent = styled.div`
     pre {
       overflow-x: auto;
     }
+
+    ul {
+      list-style-type: "◆ ";
+    }
+
+    ol {
+      list-style: lower-roman;
+    }
+
+    a {
+      color: ${theme.colors.accent};
+      transition: all 0.2s;
+      &:hover {
+        color: ${theme.fonts.colors.primary};
+        font-weight: 700;
+      }
+    }
   `}
 `
 

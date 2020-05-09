@@ -35,8 +35,9 @@ const PostLayout: React.SFC<PostProps> = ({ data }) => {
           )}
           <h1>{markdownRemark.frontmatter.title}</h1>
           <Date>
-            <p>{markdownRemark.frontmatter.date}</p> <span>◇</span>{" "}
-            <p>{markdownRemark.timeToRead}mins</p>
+            <p>{markdownRemark.frontmatter.date}</p>{" "}
+            <span style={{ color: "#45f9e5" }}>◇</span>{" "}
+            <p>{markdownRemark.timeToRead} mins</p>
           </Date>
           <div
             dangerouslySetInnerHTML={{
