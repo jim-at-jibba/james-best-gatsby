@@ -25,13 +25,6 @@ const StyledContent = styled.div`
     overflow: auto;
     border: 1px solid ${theme.colors.accent};
     border-bottom: none;
-    p {
-      font-weight: normal;
-      padding: ${px2vw(spacing(8))} 0;
-      &:last-child {
-        padding-bottom: ${px2vw(spacing(6))};
-      }
-    }
     ${mediaQueries("md")(`
       padding: ${px2vw(spacing(40))} ${px2vw(spacing(100))};
     `)}

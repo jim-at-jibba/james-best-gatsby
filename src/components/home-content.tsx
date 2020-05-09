@@ -18,7 +18,6 @@ const StyledContent = styled.div`
     padding: ${px2vw(spacing(30))} ${px2vw(spacing(60))};
     background: ${hexToRGB(theme.colors.primary, 0.7)};
     border: 1px solid ${theme.fonts.colors.primary};
-    border-bottom: none;
     p {
       font-weight: 600;
       padding: ${px2vw(spacing(8))} 0;
@@ -28,6 +27,7 @@ const StyledContent = styled.div`
     }
     ${mediaQueries("md")(`
       padding: ${px2vw(spacing(40))} ${px2vw(spacing(100))};
+      border-bottom: none;
     `)}
 
     @media screen and (max-width: 399px) {

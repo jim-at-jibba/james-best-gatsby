@@ -9,6 +9,7 @@ import Img from "gatsby-image"
 import styled, { css } from "../utils/styled-components"
 import spacing from "../utils/spacing"
 import mediaQueries from "../utils/media-queries"
+import px2vw from "../utils/px2vw"
 
 const PostRow: React.SFC<{ post: any }> = ({ post }) => {
   console.log("POST", post)
@@ -161,6 +162,7 @@ const StyledSection = styled.section`
     flex: 1;
     flex-direction: column;
     justify-content: space-around;
+    padding-bottom: ${px2vw(30, 420)};
 
     ${mediaQueries("sm")`
       flex: 2;
@@ -170,7 +172,8 @@ const StyledSection = styled.section`
     ${mediaQueries("md")`
       flex: 1;
       flex-direction: column;
-    `}
+      padding-bottom: 0;
+    `};
   `}
 `
 
