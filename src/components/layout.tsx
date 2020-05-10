@@ -77,7 +77,6 @@ const Layout: React.SFC<{}> = ({ children }) => {
           <main>{children}</main>
           <GlobalStyle />
         </Container>
-        <Footer />
       </ImageBg>
     </ThemeProvider>
   )
