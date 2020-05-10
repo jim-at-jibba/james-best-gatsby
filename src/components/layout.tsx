@@ -15,6 +15,7 @@ import { theme } from "../utils/theme"
 import ImageBg from "./background-image"
 import px2vw from "../utils/px2vw"
 import spacing from "../utils/spacing"
+import Footer from "./footer"
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -76,6 +77,7 @@ const Layout: React.SFC<{}> = ({ children }) => {
           <main>{children}</main>
           <GlobalStyle />
         </Container>
+        <Footer />
       </ImageBg>
     </ThemeProvider>
   )
