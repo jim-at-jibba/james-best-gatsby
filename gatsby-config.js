@@ -23,20 +23,34 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        // Plugins configs
-        plugins: [`gatsby-remark-prismjs`],
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
         plugins: [
+          {
+            resolve: "gatsby-remark-embed-video",
+            options: {
+              beginMarker: `[[`,
+              endMarker: `]]`,
+              width: 880,
+              ratio: 1.77,
+              height: 400,
+              related: false,
+              noIframeBorder: true,
+              urlOverrides: [
+                {
+                  id: "youtube",
+                  embedURL: videoId =>
+                    `https://www.youtube-nocookie.com/embed/${videoId}`,
+                },
+              ],
+              containerClass: "embedVideo-container",
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 820,
             },
           },
+          `gatsby-remark-prismjs`,
         ],
       },
     },

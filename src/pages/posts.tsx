@@ -21,7 +21,8 @@ const PostRow: React.SFC<{ post: any }> = ({ post }) => {
           <h2>{frontmatter.title}</h2>
           <p className="excerpt">{frontmatter.short}</p>
           <div className="dateTime">
-            <p>{frontmatter.date}</p> <span>◇</span> <p>{timeToRead}mins</p>
+            <p>{frontmatter.date}</p>{" "}
+            <span style={{ color: "#45f9e5" }}>◇</span> <p>{timeToRead} mins</p>
           </div>
         </Left>
         <Right>
@@ -110,7 +111,7 @@ const PostsPage = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
     query PostsQuery {
       allMarkdownRemark(
-        limit: 5
+        limit: 100
         sort: { order: DESC, fields: [frontmatter___date] }
       ) {
         edges {
