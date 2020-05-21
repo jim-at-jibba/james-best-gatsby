@@ -139,14 +139,13 @@ const PostsPage = () => {
   console.log("DATA", allMarkdownRemark)
   return (
     <Layout>
-      <SEO title="Page two" />
+      <SEO title="Posts" />
       <BodyWrapper>
         <PostContent>
           <h1>Posts</h1>
           <StyledSection>
             {allMarkdownRemark?.edges &&
               allMarkdownRemark.edges.map((post: any) => {
-                console.log("NODE", post)
                 return <PostRow post={post} />
               })}
           </StyledSection>
