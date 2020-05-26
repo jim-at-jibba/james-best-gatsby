@@ -1,6 +1,6 @@
 ---
 slug: "/control-vim-item-colour-schemes-by-time-day"
-title: "Time controlled colours schemes for Vim and Iterm2"
+title: "Time controlled colour schemes for Vim and Iterm2"
 short: "Want to change you Vim and Item2 colour scheme by the time of day. Here is how I did it."
 date: "2020-05-26"
 featuredImage: "../images/posts/vim-iterm-colours/header.jpg"
