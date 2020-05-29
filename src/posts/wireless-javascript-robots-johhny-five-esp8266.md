@@ -7,8 +7,6 @@ featuredImage: "../images/posts/j5-esp/j5-robot-header.jpg"
 tags: ["robotics", "javascript", "esp8266"]
 ---
 
-# Wireless javascript robotics with Johnny five and the ESP8266
-
 In this article, I will talk about the first steps needed to start building robots with Javascript. I will be using the infamous [ESP8266 microcontroller](https://en.wikipedia.org/wiki/ESP8266), this is because it is super cheap and allows it not to be tethered to your machine in the way that an Arduino would be.
 
 To allow us to write our robotics scripts in Javascript with will be using the [Johnny-Five](http://johnny-five.io/) library written by Rick Waldron. The library supports a huge selection of boards and hardware. Although not all boards support all of the hardware.
