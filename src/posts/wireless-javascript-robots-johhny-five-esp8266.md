@@ -57,6 +57,7 @@ With this done we are set to write our first script.
 const { EtherPortClient } = require("etherport-client")
 const { Board, Led, Pin } = require("johnny-five")
 const keypress = require("keypress")
+
 const board = new Board({
   port: new EtherPortClient({
     host: "192.168.1.109",
