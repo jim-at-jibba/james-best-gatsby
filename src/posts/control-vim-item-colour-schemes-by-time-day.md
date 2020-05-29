@@ -90,7 +90,7 @@ iterm2.run_forever(main)
 
 ```
 
-The only things that need changing are marked with comments. I found the _script console_ handy for debugging the scripts. Once the script is complete you can activate it _Scripts > [you script name]_.
+The only things that need changing are marked with comments. I found the _script console_ handy for debugging the scripts. Once the script is complete you can activate it _Scripts > [you script name]_. If you want it to run automatically, move the script to `$HOME/Library/ApplicationSupport/iTerm2/Scripts/AutoLaunch`. You may need to create this folder.
 
 Now that the scripts are in place you should have a lovely self-changing development environment allowing you to code all day and night 😀.
 
