@@ -13,7 +13,6 @@ I am a long term Neovim user and feel that the only Intellisense engine to use i
 
 I write Typescript daily and so use the [`coc-tsserver`](https://github.com/neoclide/coc-tsserver) plugin. It gives all the power of VSCodes typescript engine in NeoVim. But recently it broke. It was reporting errors when there was nothing wrong. I made sure all my dependencies we up to date and still nothing. All I was seeing was this:
 
-{Image of all the errors}
 
 The error message is: `The error message is: [tsserver 2307] [E] Cannot find module <import-path>`
 
