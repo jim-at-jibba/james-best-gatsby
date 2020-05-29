@@ -2,7 +2,7 @@
 slug: "/wireless-javascript-robots-johhny-five-esp8266"
 title: "Wireless javascript robotics with Johnny five and the ESP8266"
 short: "Want to build robots with Javscript?"
-date: "2020-05-22"
+date: "2020-05-29"
 featuredImage: "../images/posts/j5-esp/j5-robot-header.jpg"
 tags: ["robotics", "javascript", "esp8266"]
 ---
