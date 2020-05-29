@@ -49,7 +49,7 @@ Create a new folder for the project and initialise a new node project
 
 Now we need to install Johnny-Five and the ethernet client that allows us to connect wirelessly.
 
-`npm install johnny-five ethernet-client`
+`npm install johnny-five ethernet-client keypress`
 
 With this done we are set to write our first script.
 
