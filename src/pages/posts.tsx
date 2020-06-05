@@ -15,7 +15,7 @@ const PostRow: React.SFC<{ post: any }> = ({ post }) => {
   const { node } = post
   const { timeToRead, frontmatter } = node
   return (
-    <StyledLink to={`posts/${frontmatter.slug}`}>
+    <StyledLink to={`/posts${frontmatter.slug}`}>
       <Row>
         <Left>
           <h2>{frontmatter.title}</h2>
