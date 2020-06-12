@@ -13,7 +13,7 @@ In my free time, I like to learn about hacking and often spend my time completin
 
 I have always run Kali in a virtual machine (VM) in Virtualbox and I had never had any issues.
 
-But when I installed it on my new (to me) 2019 MacBook Pro, there was so much lag that it was pretty much unusable. Bit if I ran it on my second display, a non-retina AOC 27in screen it ran fine. It boiled down to it being run on a retina display.
+But when I installed it on my new (to me) 2019 MacBook Pro, there was so much lag that it was pretty much unusable. But if I ran it on my second display, a non-retina AOC 27in screen it ran fine. It boiled down to it being run on a retina display.
 
 After a bit of digging, I found [this thread](https://forums.virtualbox.org/viewtopic.php?f=8&t=93113) which seemed to be describing a similar situation to mine.
 
