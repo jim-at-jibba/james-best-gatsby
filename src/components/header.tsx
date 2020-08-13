@@ -20,7 +20,7 @@ const Header = () => {
           <ul>
             <li>
               <Link
-                to="posts"
+                to="/posts/"
                 activeStyle={{ background: "#ff286c" }}
                 partiallyActive={true}
               >
@@ -89,6 +89,7 @@ const Right = styled.div`
       li {
         display: flex;
         align-items: center;
+        margin: 0 2px;
       }
 
       a {
@@ -97,7 +98,7 @@ const Right = styled.div`
         font-size: ${theme.fonts.sizes.xxl};
         color: ${theme.fonts.colors.primary};
         transition: all 0.2s;
-        padding: 0 3px;
+        padding: 0 6px;
 
         &:hover {
           background: ${theme.colors.accent};
