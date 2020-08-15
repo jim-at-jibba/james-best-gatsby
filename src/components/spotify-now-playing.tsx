@@ -32,7 +32,7 @@ const SpotifyNowPlaying = () => {
 
     return (
       <Wrapper>
-        <a href={externalUrl}>
+        <a href={externalUrl} target="_blank" rel="noreferrer">
           <RiSpotifyLine />
           {data.is_playing ? <RiPlayLine /> : <RiPauseLine />}
           <p>
