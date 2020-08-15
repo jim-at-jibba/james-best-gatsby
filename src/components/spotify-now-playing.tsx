@@ -7,16 +7,9 @@ import mediaQueries from "../utils/media-queries"
 
 const getCurrentTrack = async () => {
   const { data } = await axios.get(
-    "https://api.spotify.com/v1/me/player/currently-playing",
-    {
-      headers: {
-        Authorization:
-          "Bearer BQAmJXpmsmM2yjYeYzhRSDC4neTNQn7xdczsxz5JkRTltwbxdeSqRh_1NQPGpztGTTDeIlz0cjjSMhoK7-6nVKtpHj6u031LQxl4Q0HhSB0xgiLSpVLT7at4ckdWvUgitAiPxB0uWXb7pMDC6gYZ1J0IpqsXR7LqsNdr68XS",
-      },
-    }
+    "https://0x3ipqq2hc.execute-api.eu-west-1.amazonaws.com/prod/spotify"
   )
 
-  console.log("Playing", data)
   return data
 }
 
@@ -57,6 +50,7 @@ const Wrapper = styled.div`
   ${({ theme }) => css`
     display: none;
     ${mediaQueries("md")`display: flex`}
+    margin-right: 30px;
     a {
       display: flex;
       flex-direction: row;

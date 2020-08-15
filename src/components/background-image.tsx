@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import styled, { css } from "../utils/styled-components"
 
-const ImageBg: React.SFC<{}> = ({ children }) => {
+const ImageBg: React.SFC = ({ children }) => {
   const data = useStaticQuery(graphql`
     query {
       desktop: file(relativePath: { eq: "home-bg.jpg" }) {
