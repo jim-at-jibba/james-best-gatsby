@@ -51,6 +51,12 @@ const Wrapper = styled.div`
     display: none;
     ${mediaQueries("md")`display: flex`}
     margin-right: 30px;
+    padding: 0 20px;
+    background: ${theme.colors.primary};
+    border-width: 1px;
+    border-color: ${theme.colors.accent};
+    border-style: solid;
+    border-bottom: none;
     a {
       display: flex;
       flex-direction: row;
