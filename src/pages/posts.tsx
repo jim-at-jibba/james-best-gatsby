@@ -163,11 +163,6 @@ const StyledSection = styled.section`
     justify-content: space-around;
     padding-bottom: ${px2vw(30, 420)};
 
-    ${mediaQueries("sm")`
-      flex: 2;
-      flex-direction: row;
-    `}
-
     ${mediaQueries("md")`
       flex: 1;
       flex-direction: column;
