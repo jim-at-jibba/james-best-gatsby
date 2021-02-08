@@ -5,6 +5,8 @@ type MenuStore = {
   open: boolean
   actions: {
     toggle: () => void
+    open: () => void
+    close: () => void
   }
 }
 
@@ -18,6 +20,8 @@ export const useMenuStore = create<MenuStore>(
       ...initialState,
       actions: {
         toggle: () => set(state => ({ open: !state.open })),
+        open: () => set(() => ({ open: true })),
+        close: () => set(() => ({ open: false })),
       },
     }),
     "MenuStore"

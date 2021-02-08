@@ -4,7 +4,7 @@ import styled, { css } from "../utils/styled-components"
 import px2vw from "../utils/px2vw"
 import spacing from "../utils/spacing"
 import mediaQueries from "../utils/media-queries"
-import { RiGithubLine, RiTwitterLine } from "react-icons/ri"
+import { RiGithubLine, RiTwitterLine, RiMenuLine } from "react-icons/ri"
 import { useMenuStore } from "../state/menu-store"
 
 const Header = () => {
@@ -19,37 +19,41 @@ const Header = () => {
           <LogoWrapper />
         </Left>
         <Right>
-          <button onClick={() => actions.toggle()}>Menu</button>
-          <ul>
-            <li>
-              <Link
-                to="/posts/"
-                activeStyle={{ background: "#ff286c" }}
-                partiallyActive={true}
-              >
-                POSTS
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/uses/"
-                activeStyle={{ background: "#ff286c" }}
-                partiallyActive={true}
-              >
-                USES
-              </Link>
-            </li>
-            <li>
-              <a href="https://github.com/jim-at-jibba" target="_blank">
-                <RiGithubLine />
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/jimgbest" target="_blank">
-                <RiTwitterLine />
-              </a>
-            </li>
-          </ul>
+          <MobileMenuButton>
+            <RiMenuLine onClick={() => actions.open()} />
+          </MobileMenuButton>
+          <Menu>
+            <ul>
+              <li>
+                <Link
+                  to="/posts/"
+                  activeStyle={{ background: "#ff286c" }}
+                  partiallyActive={true}
+                >
+                  POSTS
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/uses/"
+                  activeStyle={{ background: "#ff286c" }}
+                  partiallyActive={true}
+                >
+                  USES
+                </Link>
+              </li>
+              <li>
+                <a href="https://github.com/jim-at-jibba" target="_blank">
+                  <RiGithubLine />
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/jimgbest" target="_blank">
+                  <RiTwitterLine />
+                </a>
+              </li>
+            </ul>
+          </Menu>
         </Right>
       </header>
     </HeaderWrapper>
@@ -152,6 +156,31 @@ const Logo = styled.span`
       line-height: 40px;
       letter-spacing: 0.1px;
     }
+  `}
+`
+
+const MobileMenuButton = styled.div`
+  ${({ theme }) => css`
+    margin: 18px 0 16px;
+    cursor: pointer;
+
+    ${mediaQueries("md")(`
+      display: none; 
+  `)}
+
+    svg {
+      width: 45px;
+      height: 45px;
+    }
+  `}
+`
+
+const Menu = styled.div`
+  ${({ theme }) => css`
+    display: none;
+    ${mediaQueries("md")(`
+      display: block; 
+    `)}
   `}
 `
 export default Header
