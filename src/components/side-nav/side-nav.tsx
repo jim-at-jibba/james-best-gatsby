@@ -4,6 +4,7 @@ import styled from "../../utils/styled-components"
 import { useMenuStore } from "../../state/menu-store"
 import { RiCloseLine } from "react-icons/ri"
 import { theme } from "../../utils/theme"
+import { NavInner } from "./nav"
 
 export function SideNav() {
   const { open, actions } = useMenuStore()
@@ -15,6 +16,7 @@ export function SideNav() {
         color={theme.colors.primary}
         cursor="pointer"
       />
+      <NavInner />
     </Nav>
   )
 }
