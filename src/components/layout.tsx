@@ -16,6 +16,7 @@ import ImageBg from "./background-image"
 import px2vw from "../utils/px2vw"
 import spacing from "../utils/spacing"
 import Footer from "./footer"
+import { SideNav } from "./side-nav/side-nav"
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -72,6 +73,7 @@ const Layout: React.SFC<{}> = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <ImageBg>
+        <SideNav />
         <Container>
           <Header />
           <main>{children}</main>

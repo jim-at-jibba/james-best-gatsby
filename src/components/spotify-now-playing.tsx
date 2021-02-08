@@ -28,7 +28,9 @@ const SpotifyNowPlaying = () => {
     const artist = data.item.artists[0].name
     const track = data.item.name
     const image = data.item.album.images[2].url
-    const externalUrl = data.context.external_urls.spotify
+    const externalUrl = data.context?.external_urls
+      ? data.context.external_urls.spotify
+      : ""
 
     return (
       <Wrapper>

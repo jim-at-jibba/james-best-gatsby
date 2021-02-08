@@ -5,8 +5,10 @@ import px2vw from "../utils/px2vw"
 import spacing from "../utils/spacing"
 import mediaQueries from "../utils/media-queries"
 import { RiGithubLine, RiTwitterLine } from "react-icons/ri"
+import { useMenuStore } from "../state/menu-store"
 
 const Header = () => {
+  const { actions } = useMenuStore()
   return (
     <HeaderWrapper>
       <header>
@@ -17,6 +19,7 @@ const Header = () => {
           <LogoWrapper />
         </Left>
         <Right>
+          <button onClick={() => actions.toggle()}>Menu</button>
           <ul>
             <li>
               <Link
