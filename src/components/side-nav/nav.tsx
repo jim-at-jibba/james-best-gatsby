@@ -18,6 +18,12 @@ const item = {
 
 export function NavInner() {
   const { open, actions } = useMenuStore()
+
+  function closeMenu() {
+    setTimeout(() => {
+      actions.close()
+    }, 300)
+  }
   return (
     <Menu>
       <motion.ul
@@ -30,6 +36,7 @@ export function NavInner() {
             to="/posts/"
             activeStyle={{ background: "#ff286c" }}
             partiallyActive={true}
+            onClick={() => closeMenu()}
           >
             POSTS
           </Link>
@@ -39,6 +46,7 @@ export function NavInner() {
             to="/uses/"
             activeStyle={{ background: "#ff286c" }}
             partiallyActive={true}
+            onClick={() => closeMenu()}
           >
             USES
           </Link>
