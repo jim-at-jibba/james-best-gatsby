@@ -9,7 +9,7 @@ import { NavInner } from "./nav"
 export function SideNav() {
   const { open, actions } = useMenuStore()
   return (
-    <Nav initial={false} animate={open ? { width: "400px" } : { width: 0 }}>
+    <Nav initial={false} animate={open ? { width: "350px" } : { width: 0 }}>
       <Close
         onClick={() => actions.close()}
         size={60}
@@ -32,6 +32,6 @@ const Nav = styled(motion.nav)`
 const Close = styled(RiCloseLine)`
   cursor: pointer;
   position: relative;
-  right: -315px;
+  right: -280px;
   top: 20px;
 `
