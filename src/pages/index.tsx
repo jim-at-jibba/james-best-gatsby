@@ -8,7 +8,6 @@ import px2vw from "../utils/px2vw"
 import spacing from "../utils/spacing"
 import mediaQueries from "../utils/media-queries"
 import { Text } from "../components/typography"
-import BodyWrapper from "../components/shared/BodyWrapper"
 
 const IndexPage = () => (
   <Layout>
@@ -16,7 +15,10 @@ const IndexPage = () => (
     <HomeBodyWrapper>
       <Inner>
         <TagLineWrapper>
-          <h1>Hello, I'm James. I'm a software engineer from Bristol, UK.</h1>
+          <h1>
+            Hello, I'm James. I'm a software engineer and hacker from Bristol,
+            UK.
+          </h1>
         </TagLineWrapper>
         <Content>
           <Title>About</Title>
