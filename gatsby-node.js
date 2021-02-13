@@ -39,7 +39,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   const securityPosts = graphql(`
     query {
-      allMarkdownRemark(
+      allFiles(
         limit: 100
         sort: { fields: [frontmatter___date], order: DESC }
         filter: { fileAbsolutePath: { regex: "/src/hacking-posts/" } }
@@ -54,7 +54,7 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }
   `).then(result => {
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    result.data.allFiles.edges.forEach(({ node }) => {
       createPage({
         path: `/hacking${node.frontmatter.slug}`,
         component: path.resolve("./src/components/post-layout.tsx"),
