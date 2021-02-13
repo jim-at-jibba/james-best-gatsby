@@ -54,7 +54,7 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }
   `).then(result => {
-    result.data.allFile.edges.forEach(({ node }) => {
+    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: `/hacking${node.frontmatter.slug}`,
         component: path.resolve("./src/components/post-layout.tsx"),
@@ -82,7 +82,7 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }
   `).then(result => {
-    result.data.allFile.edges.forEach(({ node }) => {
+    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: `/posts${node.frontmatter.slug}`,
         component: path.resolve("./src/components/post-layout.tsx"),
