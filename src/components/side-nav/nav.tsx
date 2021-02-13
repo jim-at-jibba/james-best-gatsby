@@ -52,6 +52,16 @@ export function NavInner() {
           </Link>
         </motion.li>
         <motion.li variants={item}>
+          <Link
+            to="/hacking/"
+            activeStyle={{ background: "#ff286c" }}
+            partiallyActive={true}
+            onClick={() => closeMenu()}
+          >
+            HACKING
+          </Link>
+        </motion.li>
+        <motion.li variants={item}>
           <a href="https://github.com/jim-at-jibba" target="_blank">
             <RiGithubLine />
           </a>

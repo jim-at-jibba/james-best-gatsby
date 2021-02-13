@@ -43,6 +43,15 @@ const Header = () => {
                 </Link>
               </li>
               <li>
+                <Link
+                  to="/hacking/"
+                  activeStyle={{ background: "#ff286c" }}
+                  partiallyActive={true}
+                >
+                  HACKING
+                </Link>
+              </li>
+              <li>
                 <a href="https://github.com/jim-at-jibba" target="_blank">
                   <RiGithubLine />
                 </a>
@@ -100,7 +109,6 @@ const Right = styled.div`
       flex-direction: row;
       justify-content: space-around;
       list-style: none;
-      width: 250px;
 
       li {
         display: flex;
