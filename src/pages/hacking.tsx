@@ -107,13 +107,13 @@ const Right = styled.div`
     `)}
   `}
 `
-const PostsPage = () => {
+const HackingPage = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
-    query PostsQuery {
+    query HackingPostsQuery {
       allMarkdownRemark(
         limit: 100
-        sort: { fields: [frontmatter___date], order: DESC }
-        filter: { fileAbsolutePath: { regex: "/src/posts/" } }
+        sort: { order: DESC, fields: [frontmatter___date] }
+        filter: { fileAbsolutePath: { regex: "/src/hacking-posts/" } }
       ) {
         edges {
           node {
@@ -140,10 +140,10 @@ const PostsPage = () => {
   console.log("DATA", allMarkdownRemark)
   return (
     <Layout>
-      <SEO title="Posts" />
+      <SEO title="Hacking" />
       <BodyWrapper>
         <PostContent>
-          <h1>Posts</h1>
+          <h1>Hacking</h1>
           <StyledSection>
             {allMarkdownRemark?.edges &&
               allMarkdownRemark.edges.map((post: any) => {
@@ -172,4 +172,4 @@ const StyledSection = styled.section`
   `}
 `
 
-export default PostsPage
+export default HackingPage
