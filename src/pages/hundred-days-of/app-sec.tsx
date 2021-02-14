@@ -1,21 +1,20 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import BodyWrapper from "../components/shared/BodyWrapper"
-import PostContent from "../components/post-content"
-import Img from "gatsby-image"
-import styled, { css } from "../utils/styled-components"
-import spacing from "../utils/spacing"
-import mediaQueries from "../utils/media-queries"
-import px2vw from "../utils/px2vw"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
+import BodyWrapper from "../../components/shared/BodyWrapper"
+import PostContent from "../../components/post-content"
+import styled, { css } from "../../utils/styled-components"
+import spacing from "../../utils/spacing"
+import mediaQueries from "../../utils/media-queries"
+import px2vw from "../../utils/px2vw"
 
 const PostRow: React.SFC<{ post: any }> = ({ post }) => {
   const { node } = post
   const { timeToRead, frontmatter } = node
   return (
-    <StyledLink to={`/hacking${frontmatter.slug}`}>
+    <StyledLink to={`/hundred-days-of/app-sec${frontmatter.slug}`}>
       <Row>
         <Left>
           <h2>{frontmatter.title}</h2>
@@ -25,9 +24,6 @@ const PostRow: React.SFC<{ post: any }> = ({ post }) => {
             <span style={{ color: "#45f9e5" }}>◇</span> <p>{timeToRead} mins</p>
           </div>
         </Left>
-        <Right>
-          <Img fluid={frontmatter.featuredImage.childImageSharp.fluid} />
-        </Right>
       </Row>
     </StyledLink>
   )
@@ -66,7 +62,7 @@ const Row = styled.div`
 const Left = styled.div`
   ${({ theme }) => css`
     display: flex;
-    flex: 3;
+    flex: 1;
     flex-direction: column;
 
     h2 {
@@ -92,28 +88,15 @@ const Left = styled.div`
     }
   `}
 `
-const Right = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    width: 100%;
-    flex: 1;
-    height: auto;
-    .gatsby-image-wrapper {
-      width: 100%;
-    }
-
-    ${mediaQueries("md")(`
-      width: 150px;
-    `)}
-  `}
-`
-const HackingPage = () => {
+const AppSecPage = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
-    query HackingPostsQuery {
+    query AppSecPostsQuery {
       allMarkdownRemark(
         limit: 100
         sort: { order: DESC, fields: [frontmatter___date] }
-        filter: { fileAbsolutePath: { regex: "/src/hacking-posts/" } }
+        filter: {
+          fileAbsolutePath: { regex: "/src/hundred-days-posts/app-sec/" }
+        }
       ) {
         edges {
           node {
@@ -123,13 +106,6 @@ const HackingPage = () => {
               slug
               date(formatString: "MMMM DD, YYYY")
               short
-              featuredImage {
-                childImageSharp {
-                  fluid(maxWidth: 720) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
             }
           }
         }
@@ -137,16 +113,17 @@ const HackingPage = () => {
     }
   `)
 
+  console.log("DATA", allMarkdownRemark)
   return (
     <Layout>
       <SEO title="Hacking" />
       <BodyWrapper>
         <PostContent>
-          <h1>Hacking</h1>
+          <h1>AppSec</h1>
           <StyledSection>
             {allMarkdownRemark?.edges &&
               allMarkdownRemark.edges.map((post: any) => {
-                return <PostRow post={post} />
+                return <PostRow key={post} post={post} />
               })}
           </StyledSection>
         </PostContent>
@@ -171,4 +148,4 @@ const StyledSection = styled.section`
   `}
 `
 
-export default HackingPage
+export default AppSecPage
