@@ -35,6 +35,10 @@ const StyledContent = styled.div`
 
     ul {
       list-style-type: "◆ ";
+
+      p {
+        margin: 5px 0;
+      }
     }
 
     ol {

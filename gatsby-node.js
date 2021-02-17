@@ -53,7 +53,7 @@ exports.createPages = ({ graphql, actions }) => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: `/hundred-days-of/app-sec${node.frontmatter.slug}`,
-        component: path.resolve("./src/components/post-layout.tsx"),
+        component: path.resolve("./src/components/hundred-days-layout.tsx"),
         context: {
           slug: node.frontmatter.slug,
         },
