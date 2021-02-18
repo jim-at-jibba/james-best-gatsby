@@ -11,3 +11,7 @@
   padding-left: 2.8em;
   overflow: initial;
 }
+
+.embedVideo-container iframe {
+  max-width: 693px;
+}
