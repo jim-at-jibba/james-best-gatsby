@@ -58,10 +58,12 @@ focus: "fundamentals"
 
 Currently working through the Unix badge. Today I completed:
 
-- Unix - Lab #17: Find admin password for Tomcat server
-- Unix - Lab #18: Get the admin password from the MYSQL database
-  - lots of databases are unsecured and can be accessed with no password `mysql -u root`
-- Unix - Lab #19: Same as the previous but with a password
+
+    Unix - Lab #17: Find admin password for Tomcat server
+    Unix - Lab #18: Get the admin password from the MYSQL database
+        lots of databases are unsecured and can be accessed with no password mysql -u root
+    Unix - Lab #19: Same as the previous but with a password
+
 
 ## Portswigger academy
 
