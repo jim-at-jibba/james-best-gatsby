@@ -10,7 +10,7 @@ focus: "fundamentals"
 
 ## Youtube video:
 
-[[youtube: hmlkUYJ9MFw]]
+[[youtube: A0LTyH4tOmQ]]
 
 - Make a checklist of things you want from a program
     - Whats in scope
