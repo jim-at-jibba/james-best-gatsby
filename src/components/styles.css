@@ -13,5 +13,6 @@
 }
 
 .embedVideo-container iframe {
+  width: 100%;
   max-width: 693px;
 }

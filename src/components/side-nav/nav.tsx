@@ -43,16 +43,6 @@ export function NavInner() {
         </motion.li>
         <motion.li variants={item}>
           <Link
-            to="/hacking/"
-            activeStyle={{ background: "#ff286c" }}
-            partiallyActive={true}
-            onClick={() => closeMenu()}
-          >
-            HACKING
-          </Link>
-        </motion.li>
-        <motion.li variants={item}>
-          <Link
             to="/uses/"
             activeStyle={{ background: "#ff286c" }}
             partiallyActive={true}
