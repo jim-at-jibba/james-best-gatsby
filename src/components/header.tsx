@@ -35,15 +35,6 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  to="/hacking/"
-                  activeStyle={{ background: "#ff286c" }}
-                  partiallyActive={true}
-                >
-                  HACKING
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/uses/"
                   activeStyle={{ background: "#ff286c" }}
                   partiallyActive={true}
