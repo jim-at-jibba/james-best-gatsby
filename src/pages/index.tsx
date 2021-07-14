@@ -24,7 +24,8 @@ const IndexPage = () => (
           <Title>About</Title>
           <Text>
             I’m a software engineer working primarily in JavaScript and
-            Typescript. I'm a full stack engineer at Candide in Bristol.
+            Typescript. I'm a full stack engineer working on mobile apps at
+            Breedr.
           </Text>
           <Text>
             I create performant, highly scalable web based applications. I also
@@ -32,8 +33,7 @@ const IndexPage = () => (
             as the native platforms.
           </Text>
           <Text>
-            Writer for the Salted Bytes and Candide publications and co-host of
-            Salted Bytes podcast.
+            Writer for the Salted Bytes and co-host of Salted Bytes podcast.
           </Text>
           <Text>Mentor at Coding Coach.</Text>
         </Content>
