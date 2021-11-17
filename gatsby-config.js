@@ -37,8 +37,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `hundred-days-appsec`,
-        path: `${__dirname}/src/hundred-days-posts/app-sec`,
+        name: `hundred-days-blockchain`,
+        path: `${__dirname}/src/hundred-days-posts/blockchain`,
       },
     },
     {

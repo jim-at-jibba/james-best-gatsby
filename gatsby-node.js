@@ -31,13 +31,13 @@ exports.createPages = ({ graphql, actions }) => {
     })
   })
 
-  const hundredAppSecPosts = graphql(`
+  const hundredBlockchainPosts = graphql(`
     query {
       allMarkdownRemark(
         limit: 100
         sort: { fields: [frontmatter___date], order: DESC }
         filter: {
-          fileAbsolutePath: { regex: "/src/hundred-days-posts/app-sec/" }
+          fileAbsolutePath: { regex: "/src/hundred-days-posts/blockchain/" }
         }
       ) {
         edges {
@@ -52,7 +52,7 @@ exports.createPages = ({ graphql, actions }) => {
   `).then(result => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
-        path: `/hundred-days-of/app-sec${node.frontmatter.slug}`,
+        path: `/hundred-days-of/blockchain${node.frontmatter.slug}`,
         component: path.resolve("./src/components/hundred-days-layout.tsx"),
         context: {
           slug: node.frontmatter.slug,
@@ -89,5 +89,5 @@ exports.createPages = ({ graphql, actions }) => {
     })
   })
 
-  return Promise.all([securityPosts, posts])
+  return Promise.all([securityPosts, posts, hundredBlockchainPosts])
 }
