@@ -35,6 +35,15 @@ const Header = () => {
               </li>
               <li>
                 <Link
+                  to="/hundred-days-of/"
+                  activeStyle={{ background: "#ff286c" }}
+                  partiallyActive={true}
+                >
+                  100 DAYS OF...
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/uses/"
                   activeStyle={{ background: "#ff286c" }}
                   partiallyActive={true}

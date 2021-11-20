@@ -43,6 +43,16 @@ export function NavInner() {
         </motion.li>
         <motion.li variants={item}>
           <Link
+            to="/hundred-days-of/"
+            activeStyle={{ background: "#ff286c" }}
+            partiallyActive={true}
+            onClick={() => closeMenu()}
+          >
+            100 DAYS OF
+          </Link>
+        </motion.li>
+        <motion.li variants={item}>
+          <Link
             to="/uses/"
             activeStyle={{ background: "#ff286c" }}
             partiallyActive={true}
