@@ -51,7 +51,7 @@ const UsesPage = () => {
             <div>
               <h1>On the desk</h1>
               <p>
-                I use a 2019 15in Macbook Pro (always in calmshell position in a{" "}
+                I use a 2020 16in Macbook Pro (always in calmshell position in a{" "}
                 <a
                   href="https://www.amazon.co.uk/dp/B07TVMD7R7/"
                   target="_blank"
@@ -59,7 +59,7 @@ const UsesPage = () => {
                   MOSISO laptop stand
                 </a>
                 ). Connected to that are 2 AOC monitors on monitor arms. One is
-                27in and the other 24in. There is nothing special about them.
+                32in 4K and the other 27in. There is nothing special about them.
               </p>
               <p>
                 I use a{" "}
@@ -89,7 +89,7 @@ const UsesPage = () => {
             <div>
               <h1>Software</h1>
               <p>
-                I do all my development in a terminal, leaning on iTerm2 with
+                I do all my development in a terminal, leaning on Kitty with
                 NeoVim and Tmux.
               </p>
               <p>
@@ -108,8 +108,8 @@ const UsesPage = () => {
                   here.
                 </a>{" "}
                 I use the awesome{" "}
-                <a href="https://dank.sh/" target="_blank">
-                  Dank Mono
+                <a href="https://www.monolisa.dev/" target="_blank">
+                  MonoLisa
                 </a>
               </p>
               <p>My essential cli tools include:</p>
